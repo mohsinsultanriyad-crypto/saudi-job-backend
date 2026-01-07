@@ -3,10 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "server.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "dependencies": {
     "@capacitor/android": "^8.0.0",
@@ -24,15 +26,8 @@
     "typescript": "~5.8.2",
     "vite": "^6.4.1"
   },
-  "description": "<div align=\"center\"> <img width=\"1200\" height=\"475\" alt=\"GHBanner\" src=\"https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6\" /> </div>",
-  "main": "index.js",
+  "description": "SAUDI JOB App backend",
   "keywords": [],
   "author": "",
   "license": "ISC"
-}
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "start": "node server.js"
 }
