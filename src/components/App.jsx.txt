@@ -1,0 +1,12 @@
+import PostJob from './components/PostJob';
+
+function App() {
+  return (
+    <div>
+      <h1>SAUDI JOB</h1>
+      <PostJob />
+    </div>
+  );
+}
+
+export default App;

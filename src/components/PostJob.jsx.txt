@@ -1,0 +1,40 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+
+function PostJob() {
+  const [jobTitle, setJobTitle] = useState('');
+  const [jobDescription, setJobDescription] = useState('');
+
+  const handlePostJob = async () => {
+    try {
+      await axios.post('http://localhost:5000/jobs', {
+        title: jobTitle,
+        description: jobDescription
+      });
+      alert('Job posted successfully!');
+      setJobTitle('');
+      setJobDescription('');
+    } catch (error) {
+      console.error(error);
+      alert('Failed to post job');
+    }
+  };
+
+  return (
+    <div>
+      <input
+        placeholder="Job Title"
+        value={jobTitle}
+        onChange={(e) => setJobTitle(e.target.value)}
+      />
+      <textarea
+        placeholder="Job Description"
+        value={jobDescription}
+        onChange={(e) => setJobDescription(e.target.value)}
+      />
+      <button onClick={handlePostJob}>Post Job</button>
+    </div>
+  );
+}
+
+export default PostJob;
